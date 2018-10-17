@@ -8,7 +8,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class StatementTest {
+public class FactoryTest {
 	private PizzaStore ps;
 	private Pizza pizza;
 	
