@@ -1,7 +1,0 @@
-<!ELEMENT people (person)*>
-
-<!ELEMENT person EMPTY>
-<!ATTLIST person
-    name CDATA ""
-    age CDATA ""
-    id CDATA "">
