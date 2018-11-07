@@ -13,7 +13,7 @@ public interface LoginService {
 	 * @param pwd
 	 * @return
 	 */
-	public boolean login(String userName, String pwd);
+	public boolean login(String userName, String pwd) throws Exception;
 
 	/**
 	 *

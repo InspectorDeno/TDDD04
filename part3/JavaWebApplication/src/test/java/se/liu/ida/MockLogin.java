@@ -10,7 +10,7 @@ public class MockLogin {
 	String session;
 
 	@Test
-	public void testValidLogin() {
+	public void testValidLogin() throws Exception{
 		// Create mock
 		LoginService mockup = mock(LoginService.class);
 		// Define return value for login
@@ -20,7 +20,7 @@ public class MockLogin {
 	}
 	
 	@Test
-	public void testInValidLogin() {
+	public void testInValidLogin() throws Exception{
 		// Create mock
 		LoginService mockup = mock(LoginService.class);
 		// Define return value for login
@@ -30,7 +30,7 @@ public class MockLogin {
 	}
 	
 	@Test
-	public void testgetId() {
+	public void testgetId() throws Exception{
 		// Create mock
 		LoginService mockup = mock(LoginService.class);
 		
@@ -40,7 +40,7 @@ public class MockLogin {
 	}
 	
 	@Test
-	public void testgetSession() {
+	public void testgetSession() throws Exception{
 		// Create mock
 		LoginService mockup = mock(LoginService.class);
 		
