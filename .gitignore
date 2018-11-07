@@ -1,6 +1,6 @@
 part2/code_examples/*
-part2/code_examples/Factory Method/src/FactoryTest.java
-part2/code_examples/Interpreter/src/interpreter/InterpreterTest.java
+!part2/code_examples/Factory Method/src/FactoryTest.java
+!part2/code_examples/Interpreter/src/interpreter/InterpreterTest.java
 .idea/
 .iml
 .classpath
