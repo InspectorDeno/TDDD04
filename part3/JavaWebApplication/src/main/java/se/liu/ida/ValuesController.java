@@ -17,17 +17,21 @@ public class ValuesController {
 
 	@RequestMapping("/login")
 	public String login(String userName, String password) {
-		return  "OK";
+		
+		if(loginService.login(userName, password)) {
+			return  "OK";
+		}
+		return "NO";
 	}
 
 	@RequestMapping("/getid")
 	public int getId(String userName) {
-		return  123;
+		return  loginService.getId(userName);
 	}
 
 	@RequestMapping("/getsession")
 	public String getSession(String userName) {
-		return "olero123";
+		return loginService.getSession(userName);
 	}
 
 	@RequestMapping("/")

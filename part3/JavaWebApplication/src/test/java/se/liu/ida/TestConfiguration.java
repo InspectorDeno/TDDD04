@@ -1,6 +1,6 @@
 package se.liu.ida;
 
-import org.mockito.Mockito;
+import static org.mockito.Mockito.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -15,9 +15,16 @@ public class TestConfiguration {
 	@Bean
 	@Primary
 	public LoginService loginService() {
-		LoginService loginService =  Mockito.mock(LoginService.class);
-
-		/** Add mocked behavior */
+		LoginService loginService =  mock(LoginService.class);
+		
+		when(loginService.getId(anyString())).thenReturn(1234);
+		
+		when(loginService.login("olero", "valid_password")).thenAnswer(
+				invocation -> {
+					session = "olero123";
+					return true;
+				});
+		when(loginService.getSession(anyString())).thenAnswer(invocation -> session);
 
 		return loginService;
 	}

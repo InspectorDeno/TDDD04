@@ -19,37 +19,43 @@ public class LoginServiceTest {
 
     @Test
     public void test1Login(){
-        System.out.println("Testing login...");
-        try {
-            // Reset database file
-            loginservice.clearData();
-            boolean login = loginservice.login("dendu", "password123");
-            assertTrue(login);
-
-        } catch (Exception e){
-            System.out.println(e);
-        }
+        System.out.println("Testing login");
+        assertTrue(loginservice.login("dendu", "password"));
+    }
+    
+    @Test
+    public void test2InvalidLogin(){
+        System.out.println("Testing invalid login");
+        assertFalse(loginservice.login("dendu", "passpass"));
     }
 
     @Test
-    public void test2GetId() {
-        System.out.println("Testing getId...");
-        int id = loginservice.getId("dendu");
-        System.out.println(id);
-        assertNotEquals(id, -1);
+    public void test3GetId() {
+        System.out.println("Testing getId");
+        assertNotEquals(loginservice.getId("dendu"), -1);
+    }
+    
+    @Test
+    public void test4InvalidGetId() {
+        System.out.println("Testing invalid getId");
+        assertEquals(loginservice.getId("dendu"), -1);
     }
 
     @Test
-    public void test3GetSession() {
-        System.out.println("Testing getSession...");
-        String session = loginservice.getSession("dendu");
-        System.out.println(session);
-        assertNotNull(session);
+    public void test5GetSession() {
+        System.out.println("Testing getSession");
+        assertEquals(loginservice.getSession("dendu"), "dendu933");
+    }
+    
+    @Test
+    public void test6GetInvalidSession() {
+        System.out.println("Testing getSession");
+        assertEquals(loginservice.getSession("bumbo"), "NO");
     }
 
     @After
     public void tearDown(){
-        System.out.println("Running teardown...");
+        System.out.println("Running teardown");
         loginservice = null;
         assertNull(loginservice);
     }

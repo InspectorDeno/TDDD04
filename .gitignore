@@ -7,3 +7,5 @@ part2/code_examples/*
 .project
 .class
 target/
+database.txt
+bin/
