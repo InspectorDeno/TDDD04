@@ -38,7 +38,7 @@ public class LoginServiceTest {
     @Test
     public void test4InvalidGetId() {
         System.out.println("Testing invalid getId");
-        assertEquals(loginservice.getId("dendu"), -1);
+        assertEquals(loginservice.getId("bumbo"), -1);
     }
 
     @Test
