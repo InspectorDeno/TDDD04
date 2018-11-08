@@ -49,7 +49,7 @@ public class LoginServiceTest {
     
     @Test
     public void test6GetInvalidSession() {
-        System.out.println("Testing getSession");
+        System.out.println("Testing invalid getSession");
         assertEquals(loginservice.getSession("bumbo"), "NO");
     }
 
